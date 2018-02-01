@@ -11,19 +11,26 @@ function days(callMeBack)  {
 }
 
 function givesACallBack(bob){
-    return foo
-    function foo() {
-        console.log("This works")
-    }
 
+    function foo() {
+        console.log("Now the time has passed")
+    }
+    console.log("This works")
+    return foo
 }
 
 //does not work because calling setTimeout on "undefined" days() does not return a value
-//setTimeout(days(helloCallback),2500)
-setTimeout(givesACallBack(helloCallback),2500)
+// setTimeout(days(helloCallback),2500)
 
-setTimeout(function(){days(helloCallback)}, 2500)
-foo = days(helloCallback)
-console.log(foo)
-console.log("\nThe program keeps going.\n")
-console.log("And going...\n")
+//works because given func returns a func
+// setTimeout(givesACallBack(),2500)
+console.log("Starting")
+givesACallBack()
+
+setTimeout(finalCallback, 2500)
+
+//setTimeout(function(){days(helloCallback)}, 2500)
+//foo = days(helloCallback)
+//console.log(foo)
+//console.log("\nThe program keeps going.\n")
+//console.log("And going...\n")
