@@ -27,7 +27,7 @@ setTimeout(finalCallback, 2505)
 //works because given func returns a func
 setTimeout(givesACallBack(),2500)
 console.log("Starting")
-givesACallBack()
+//givesACallBack()
 
 setTimeout(function(){days(helloCallback)}, 2500)
 
