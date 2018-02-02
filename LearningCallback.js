@@ -8,7 +8,6 @@ function finalCallback() {
 function days(callMeBack)  {
     callMeBack("! It's a good day")
     callMeBack(". It's a bad day")
-    callMeBack(". It's an okay day")
 }
 
 function givesACallBack(bob){
